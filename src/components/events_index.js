@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
-import {connect} from 'react-recux'
+import {connect} from 'react-redux'
 
 import {increment, decrement} from '../actions'
 
 
-class Counter extends Component {
+class EventsIndex extends Component {
 
   render(){
-    const props this.props
+    const props = this.props
     return(
       <React.Fragment>
       <div>value: {props.value }</div>
@@ -19,9 +19,6 @@ class Counter extends Component {
 }
 
 const mapStateToProps = state => ({value: state.count.value})
-const mapDispatchToProps = dispatch => ({
-  increment: () => dispatch(increment())
-  decrement: () => dispatch(decrement())
-})
+const mapDispatchToProps = ({increment, decrement})
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(EventsIndex)
